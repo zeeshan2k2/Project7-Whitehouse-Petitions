@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C10277F22B78157E0098A44C /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10277F12B78157E0098A44C /* Petition.swift */; };
 		C10277F42B781CC80098A44C /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10277F32B781CC80098A44C /* Petitions.swift */; };
+		C10277F62B782B440098A44C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10277F52B782B440098A44C /* DetailViewController.swift */; };
 		C13435B02B76A903000725F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13435AF2B76A903000725F2 /* AppDelegate.swift */; };
 		C13435B22B76A903000725F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13435B12B76A903000725F2 /* SceneDelegate.swift */; };
 		C13435B42B76A903000725F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13435B32B76A903000725F2 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		C10277F12B78157E0098A44C /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		C10277F32B781CC80098A44C /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		C10277F52B782B440098A44C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C13435AC2B76A903000725F2 /* Project7-Whitehouse Petitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project7-Whitehouse Petitions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13435AF2B76A903000725F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C13435B12B76A903000725F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				C13435B12B76A903000725F2 /* SceneDelegate.swift */,
 				C10277F12B78157E0098A44C /* Petition.swift */,
 				C10277F32B781CC80098A44C /* Petitions.swift */,
+				C10277F52B782B440098A44C /* DetailViewController.swift */,
 				C13435B32B76A903000725F2 /* ViewController.swift */,
 				C13435B52B76A903000725F2 /* Main.storyboard */,
 				C13435B82B76A905000725F2 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				C13435B42B76A903000725F2 /* ViewController.swift in Sources */,
 				C10277F22B78157E0098A44C /* Petition.swift in Sources */,
 				C13435B02B76A903000725F2 /* AppDelegate.swift in Sources */,
+				C10277F62B782B440098A44C /* DetailViewController.swift in Sources */,
 				C13435B22B76A903000725F2 /* SceneDelegate.swift in Sources */,
 				C10277F42B781CC80098A44C /* Petitions.swift in Sources */,
 			);
