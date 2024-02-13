@@ -16,6 +16,13 @@ class ViewController: UITableViewController {
         
 //      using the url to get json data and the parsing it using function
         let urlString: String
+
+//      creating a right bar button item
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(credits))
+        
+//      creating a filter search field
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filter))
+        
         
         if navigationController?.tabBarItem.tag == 0 {
             urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
@@ -59,6 +66,7 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let petition = petitions[indexPath.row]
         cell.textLabel?.text = petition.title
+        print(petition.title)
         cell.detailTextLabel?.text = petition.body
         return cell
     }
@@ -69,6 +77,17 @@ class ViewController: UITableViewController {
         vc.detailItem = petitions[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+//  creating credits bar button function
+    @objc func credits() {
+        let ac = UIAlertController(title: "Data Source", message: "This data comes from 'We The People API of the Whitehouse'", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "ok", style: .cancel))
+        present(ac, animated: true)
+    }
+    
+    
+//  creating a search filter funciton
+    
 }
 
 
