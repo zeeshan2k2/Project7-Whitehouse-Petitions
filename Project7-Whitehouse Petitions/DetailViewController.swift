@@ -10,6 +10,7 @@ import WebKit
 
 class DetailViewController: UIViewController {
     var webView: WKWebView!
+//  we took data from view controller
     var detailItem: Petition?
     
     override func loadView() {
@@ -19,9 +20,11 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//      saying that if data exists then display else return
         guard let detailItem = detailItem else { return }
         
 //      assigning HTML data to a variable then later using it
+//      also using string interpolation for the detailitems variable such that we're able to display results
         let html = """
         <html>
         <head>

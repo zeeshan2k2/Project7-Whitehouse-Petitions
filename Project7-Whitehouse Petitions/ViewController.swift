@@ -23,15 +23,18 @@ class ViewController: UITableViewController {
         
 //      creating a filter search field and a reset button
         navigationItem.leftBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(filter)), UIBarButtonItem(title: "Reset", style: .done, target: self, action: #selector(reset))]
-          
+        
+        
         if navigationController?.tabBarItem.tag == 0 {
             urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
         } else {
             urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
         }
         
+        
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
+//              parsing the json
                 parse(json: data)
                 filteredPetitions = petitions
                 return
@@ -51,7 +54,9 @@ class ViewController: UITableViewController {
     func parse(json: Data) {
         let decoder = JSONDecoder()
         
+//      setting petitions result as jsonPetitions
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
+//          appending results to petitions
             petitions = jsonPetitions.results
             tableView.reloadData()
 
@@ -75,8 +80,9 @@ class ViewController: UITableViewController {
 //  connecting the DetailViewController using didselectrowat method
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
-
+//      now since we have the reesults in petition variable we set it as detail item and use it in detail view controller
         vc.detailItem = petitions[indexPath.row]
+//      pushing vc to detailviewcontroller such that we can use that in html to display the text
         navigationController?.pushViewController(vc, animated: true)
     }
     
